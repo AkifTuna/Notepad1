@@ -66,7 +66,7 @@
             newToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.N;
             newToolStripMenuItem.Size = new Size(181, 26);
             newToolStripMenuItem.Text = "&New";
-            newToolStripMenuItem.Click += newToolStripMenuItem_Click;
+           
             // 
             // openToolStripMenuItem
             // 
@@ -96,14 +96,14 @@
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
             toolStripMenuItem2.Size = new Size(178, 6);
-            toolStripMenuItem2.Click += toolStripMenuItem2_Click_1;
+          
             // 
             // toolStripMenuItem3
             // 
             toolStripMenuItem3.Name = "toolStripMenuItem3";
             toolStripMenuItem3.Size = new Size(181, 26);
             toolStripMenuItem3.Text = "&Exit";
-            toolStripMenuItem3.Click += toolStripMenuItem3_Click;
+            
             // 
             // helpToolStripMenuItem
             // 
@@ -128,7 +128,7 @@
             textBox1.ScrollBars = ScrollBars.Vertical;
             textBox1.Size = new Size(874, 605);
             textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
+           
             // 
             // Form1
             // 
@@ -148,25 +148,7 @@
             PerformLayout();
         }
 
-        private void newToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
 
         #endregion
 

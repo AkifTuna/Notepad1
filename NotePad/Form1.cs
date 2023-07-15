@@ -7,21 +7,17 @@ namespace NotePad
     {
         string path;
 
-     
+
 
         public Form1()
         {
             InitializeComponent();
         }
 
-
-
-
-
         private void newToolStripMenuItem_Click(object sender, EventArgs e, TextBox textBox)
         {
             path = string.Empty;
-            textBox.Clear();
+            textBox1.Clear();
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -35,13 +31,13 @@ namespace NotePad
                     try
                     {
 
-                        path = sfd.FileName;
+                        path = ofd.FileName;
                         using (StreamReader sr = new StreamReader(ofd.FileName))
                         {
                             path = ofd.FileName;
 
                             Task<string> text = sr.ReadToEndAsync();
-                            textBox.Text = text.Result;
+                            textBox1.Text = text.Result;
                         }
                     }
                     catch (Exception ex)
@@ -57,9 +53,9 @@ namespace NotePad
         {
             if (string.IsNullOrEmpty(path))
             {
-                using (SaveFileDialog sfd = new SaveFileDialog() { Filter= "Text Documents|*.txt", ValidateNames = true })
+                using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Text Documents|*.txt", ValidateNames = true })
                 {
-                    if(sfd.ShowDialog() == DialogResult.OK)
+                    if (sfd.ShowDialog() == DialogResult.OK)
                     {
                         try
                         {
@@ -67,7 +63,7 @@ namespace NotePad
 
                             using (StreamWriter sw = new StreamWriter(sfd.FileName))
                             {
-                                await sw.WriteLineAsync(textBox.Text);
+                                await sw.WriteLineAsync(textBox1.Text);
                             }
                         }
                         catch (Exception ex)
@@ -85,7 +81,7 @@ namespace NotePad
 
                     using (StreamWriter sw = new StreamWriter(path))
                     {
-                        await sw.WriteLineAsync(textBox.Text);
+                        await sw.WriteLineAsync(textBox1.Text);
                     }
                 }
                 catch (Exception ex)
@@ -107,7 +103,7 @@ namespace NotePad
 
                         using (StreamWriter sw = new StreamWriter(sfd.FileName))
                         {
-                            await sw.WriteLineAsync(textBox.Text);
+                            await sw.WriteLineAsync(textBox1.Text);
                         }
                     }
                     catch (Exception ex)
@@ -129,6 +125,9 @@ namespace NotePad
             }
         }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
