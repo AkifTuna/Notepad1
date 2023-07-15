@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject>NotePad.Program</StartupObject>
+    <ApplicationIcon>notepad.ico</ApplicationIcon>
+    <Company>Acotec Company</Company>
+    <Description>A basic notepad application for Windows.</Description>
+    <Copyright>Copyright © 2023</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="notepad.ico" />
+  </ItemGroup>
+
+</Project>
